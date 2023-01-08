@@ -1,0 +1,53 @@
+.recuadro iframe {
+    margin: 5%;
+}
+
+.recuadro iframe {
+grid-area: recuadro;
+}
+
+h2 .titulo{
+    grid-area: titulo;
+}
+
+.subtitulo{
+    grid-area: subtitulo;   
+    margin-top: 50px; 
+}
+
+footer{
+    grid-area: parrafo; 
+}
+
+.mapa{
+display: grid;
+grid-template-columns: 1fr;
+justify-items: center;
+grid-template-areas: 
+"titulo"
+"recuadro";
+}
+
+.superficie{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    grid-template-areas: 
+    "subtitulo  subtitulo   subtitulo   subtitulo"
+    "titulo     titulo      titulo      titulo"
+    "label      label       label       label"
+    "input      input       input       input";
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "parrafo  parrafo   parrafo";
+    gap: 25%;
+}

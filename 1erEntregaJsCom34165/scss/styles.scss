@@ -1,0 +1,44 @@
+@import "variablesGlobales";
+@import "iframes";
+@import "gridAreas";
+
+body{
+    background-color: $color-base;
+}
+
+input{
+    width: 175px;
+    height: 30px;
+    text-align: center;
+    font-size: large;
+}
+
+button{
+    width: 180px;
+    margin-top: 10px;
+    height: 30px;
+}
+button:hover{
+    background-color: $color-base;
+    color: azure;
+} 
+label{
+    font-size: large;
+}
+
+h1{
+    color: $color-base;
+    font-size: 50px;
+}
+h2{
+    color: $color-base;
+    font-size: 30px;
+}
+
+header, footer .recuadro{
+    background-color: $color-detalles;
+}
+
+p{
+    font-size: 20px;
+}

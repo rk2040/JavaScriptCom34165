@@ -1,0 +1,18 @@
+.recuadro{
+    max-width: 80%;
+    height: auto;
+    margin: auto;
+    background-color: $color-principal;
+    border: solid $color-detalles;
+    border-radius: 20px;
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    
+    iframe{
+        margin: 5%;
+    }
+}

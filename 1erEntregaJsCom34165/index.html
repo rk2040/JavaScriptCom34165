@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Primer PreEntrega</title>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header class="recuadro">
+        <h1>Primer entrega de JS</h1>
+    </header>
+    
+    <div class="recuadro form">
+        <h2 class="titulo">Ingrese medidas y valores que quiera calcular.</h2>
+        <div class="superficie">
+            <label>Metros de largo</label>
+            <label>Metros de ancho</label>
+            <label>Metros de radio</label>
+            <label>Valor del Mt2 en us$</label>
+            <input type="text" id="largo" name="largo" required placeholder="Metros largo" readonly onclick="ingresaLargo()">
+            <input type="text" id="ancho" name="ancho" required placeholder="Metros ancho" readonly onclick="ingresaAncho()">
+            <input type="text" id="radio" name="radio" required placeholder="Metros radio" readonly onclick="ingresaRadio()">
+            <input type="text" id="valorMetro" name="valorMetro" required placeholder="Valor del mt2 en us$" readonly onclick="ingresaValorMetro()">
+            <button type="button" onclick="ingresaLargo()">Ingresar Largo</button>
+            <button type="button" onclick="ingresaAncho()">Ingresar Ancho</button>
+            <button type="button" onclick="ingresaRadio()">Ingresa Radio</button>
+            <button type="button" onclick="ingresaValorMetro()">Ingresar valor metro</button>
+        </div>
+    </div>
+
+    <div class="recuadro form">
+        <h2 class="titulo">Seleccione que operaciones quiere ver.</h2>
+        <div class="superficie">
+            <label>Mts2 cuadrados Rectangulo</label>
+            <label>Valor total en us$</label>
+            <label>Mts2 cuadrados Circulo</label>
+            <label>Valor total circulo en us$</label>
+            <input type="text" id="metrosRectangulo" name="metrosRectangulo" required placeholder="Metros cuadrados" readonly>
+            <input type="Text" id="valorTotal" name="valorTotal" required placeholder="Valor Total" readonly>
+            <input type="text" id="metrosCirculo" name="metrosCirculo" required placeholder="Metros cuadrados" readonly>
+            <input type="Text" id="valorTotalCirculo" name="valorTotalCirculo" required placeholder="Valor Total" readonly>
+            <button type="button" onclick="calcularSuperficie()">Calcular Mts cuadrados</button>
+            <button type="button" onclick="calcularValorTotal()">Calcular valot total en US$</button>
+            <button type="button" onclick="calcularSuperficieCirculo()">Calcular Mts cuadrados</button>
+            <button type="button" onclick="calcularValorTotalcirculo()">Calcular valot total en US$</button>
+        </div>
+    </div>
+    
+    <div class="recuadro mapa">
+        <h2 class="titulo">Mapa del precio de metro cuadrado por barrio.</h2>
+        <iframe style="width:640px;height:720px;border-radius:10px;box-shadow:2px 4px 4px rgb(0 0 0 / 25%);background-color: azure;display:flex;justify-content:center;border:1px solid #bcbcbc" src="https://datawrapper.dwcdn.net/m0rp5/7/" frameborder="0"></iframe>
+    </div>
+
+    <footer class="recuadro">
+        <p class="parrafo">PreEntrega 1 JavaScript</p>
+        <p class="parrafo">Comicion N 34165</p>
+        <p class="parrafo">Pardo Roberto</p>
+    </footer>
+</body>
+
+</html>
