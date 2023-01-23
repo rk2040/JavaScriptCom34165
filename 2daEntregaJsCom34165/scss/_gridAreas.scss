@@ -1,0 +1,54 @@
+
+header{
+    grid-area: head;
+}
+
+.mapa{
+    grid-area: mapa;
+}
+
+.filtro{
+    grid-area: filtro;
+}
+
+.medidas{
+    grid-area: medidas;
+}
+
+.calculos{
+    grid-area: calculos;
+}
+
+footer{
+    grid-area: footer; 
+}
+
+.container-grid{
+    height: auto;
+    margin: auto;
+    row-gap: 20px;
+    column-gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.5fr 2fr 1fr 1fr 0.5fr;
+    flex-direction: column;
+    justify-content: center;
+
+    grid-template-areas:
+    "head   head    head     head"
+    "mapa   mapa    mapa     mapa"
+    "filtro filtro  medidas  medidas"
+    "filtro filtro  calculos calculos"
+    "footer footer  footer   footer"
+    ;
+}
+
+label{
+    grid-area: labe;
+}
+input{
+    grid-area: input;
+}
+select{
+    grid-area: select;
+}

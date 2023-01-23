@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Primer PreEntrega</title>
+    <script src="js/script.js"></script>
+</head>
+
+<body class="container-grid">
+    <header class="">
+        <h1>Segunda entrega de JS</h1>
+    </header>    
+    
+    <div class="mapa">
+        <h2 class="titulo">Mapa de precio por metro cuadrado por barrio.</h2>
+        <iframe class="mapa-iframe" style="width:640px;height:720px;border-radius:10px;box-shadow:2px 4px 4px rgb(0 0 0 / 25%);background-color: azure;display:flex;justify-content:center;border:1px solid #bcbcbc" src="https://datawrapper.dwcdn.net/m0rp5/7/" frameborder="0"></iframe>
+    </div>
+
+    <div class="filtro">
+        <h2 class="titulo">Elija que barrios quiere ver segun criterio.</h2>
+        <div class="superficie">
+            <button class="ordenAlfa" id="todo az" type="button" onclick="click_button(this.id)">Todos A-Z</button>
+            <button class="ordenAlfa" id="todo za" type="button" onclick="click_button(this.id)">Todos Z-A</button>
+            <button class="ordenPrecio" id="mayor precio" type="button" onclick="click_button(this.id)">Mayor precio</button>
+            <button class="ordenPrecio" id="menor precio" type="button" onclick="click_button(this.id)">Menor precio</button>
+            <button class="ordenComuna" id="comuna 1" type="button" onclick="click_button(this.id)">Comuna 1</button>
+            <button class="ordenComuna" id="comuna 2" type="button" onclick="click_button(this.id)">Comuna 2</button>
+            <button class="ordenComuna" id="comuna 3" type="button" onclick="click_button(this.id)">Comuna 3</button>
+            <button class="ordenComuna" id="comuna 4" type="button" onclick="click_button(this.id)">Comuna 4</button>
+            <button class="ordenComuna" id="comuna 5" type="button" onclick="click_button(this.id)">Comuna 5</button>
+            <button class="ordenComuna" id="comuna 6" type="button" onclick="click_button(this.id)">Comuna 6</button>
+            <button class="ordenComuna" id="comuna 7" type="button" onclick="click_button(this.id)">Comuna 7</button>
+            <button class="ordenComuna" id="comuna 8" type="button" onclick="click_button(this.id)">Comuna 8</button>
+            <button class="ordenComuna" id="comuna 9" type="button" onclick="click_button(this.id)">Comuna 9</button>
+            <button class="ordenComuna" id="comuna 10" type="button" onclick="click_button(this.id)">Comuna 10</button>
+            <button class="ordenComuna" id="comuna 11" type="button" onclick="click_button(this.id)">Comuna 11</button>
+            <button class="ordenComuna" id="comuna 12" type="button" onclick="click_button(this.id)">Comuna 12</button>
+            <button class="ordenComuna" id="comuna 13" type="button" onclick="click_button(this.id)">Comuna 13</button>
+            <button class="ordenComuna" id="comuna 14" type="button" onclick="click_button(this.id)">Comuna 14</button>
+            <button class="ordenComuna" id="comuna 15" type="button" onclick="click_button(this.id) ">Comuna 15</button>
+            <button id="" type="button" onclick="click_button(this.id)" disabled></button>
+            <button class="ordenZona" id="este" type="button" onclick="click_button(this.id)">Zona Este</button>
+            <button class="ordenZona" id="oeste" type="button" onclick="click_button(this.id)">Zona Oeste</button>
+            <button class="ordenZona" id="norte" type="button" onclick="click_button(this.id)">Zona Norte</button>
+            <button class="ordenZona" id="sur" type="button" onclick="click_button(this.id)">Zona Sur</button>
+            
+        <!-- <div class="contenedorTabla">
+            <table class="cuadroTabla" id="tabla">
+                <thead>
+                    <tr>
+                        <th class="columna-barrio">Barrio</th>
+                        <th class="columna-zona">Zona</th>
+                        <th class="columna-comuna">Distrito</th>
+                        <th class="columna-valor">Valor m2 (USD)</th>
+                    </tr>
+                    <tbody id="cuerpoTabla">
+
+                    </tbody>
+                </thead>
+            </table>
+        </div> -->
+        </div>
+    </div>
+        
+
+    <div class="form medidas">
+        <h2 class="titulo">Ingrese medidas y valores a calcular.</h2>
+        <div class="superficie-medidas">
+            <div class="input-form">
+                <label>Metros de largo</label>
+                <input type="number" id="largo" name="largo" required placeholder="Ingrese largo">
+            </div>
+            <div class="input-form">
+                <label>Metros de ancho</label>
+                <input type="number" id="ancho" name="ancho" required placeholder="Ingrese ancho">
+            </div>
+            <div class="input-form">
+                <label>Metros de radio</label>
+                <input type="number" id="radio" name="radio" required placeholder="Metros radio" readonly>
+            </div>
+            <div class="input-form">
+                <label>Valor del Mt2 en us$</label>
+                <input type="number" id="valorMetro" name="valorMetro" required placeholder="Valor del mt2 en us$" readonly> 
+            </div>
+            <form name="fomr1" class="input-form">
+                <label>Elija un barrio y obtendra el precio por mt2</label>
+                <select id="barrio" name="barrio" onclick="precioBarrio()">
+                    <option value="1">Agronomia</option>
+                    <option value="2">Almagro</option>
+                    <option value="3">Balvanera</option>
+                    <option value="4">Barracas</option>
+                    <option value="5">Belgrano</option>
+                    <option value="6">Boedo</option>
+                    <option value="7">Caballito</option>
+                    <option value="8">Chacarita</option>
+                    <option value="9">Coghlan</option>
+                    <option value="10">Colegiales</option>
+                    <option value="11">Constitucion</option>
+                    <option value="12">Flores</option>
+                    <option value="13">Floresta</option>
+                    <option value="14">La Boca</option>
+                    <option value="15">La Paternal</option>
+                    <option value="16">Liniers</option>
+                    <option value="17">Mataderos</option>
+                    <option value="18">Monserrat</option>
+                    <option value="19">Monte Castro</option>
+                    <option value="20">Nueva Pompeya</option>
+                    <option value="21">Nuñez</option>
+                    <option value="22">Palermo</option>
+                    <option value="23">Parque Avellaneda</option>
+                    <option value="24">Parque Chacabuco</option>
+                    <option value="25">Parque Chas</option>
+                    <option value="26">Parque Patricios</option>
+                    <option value="27">Puerto Madero</option>
+                    <option value="28">Recoleta</option>
+                    <option value="29">Retiro</option>
+                    <option value="30">Saavedra</option>
+                    <option value="31">San Cristobal</option>
+                    <option value="32">San Nicolas</option>
+                    <option value="33">San Telmo</option>
+                    <option value="34">Versalles</option>
+                    <option value="35">Villa Crespo</option>
+                    <option value="36">Villa del Parque</option>
+                    <option value="37">Villa Devoto</option>
+                    <option value="38">Villa General Mitre</option>
+                    <option value="39">Villa Lugano</option>
+                    <option value="40">Villa Luro</option>
+                    <option value="41">Villa Ortuzar</option>
+                    <option value="42">Villa Pueyrredon</option>
+                    <option value="43">Villa Real</option>
+                    <option value="44">Villa Santa Rita</option>
+                    <option value="45">Villa Soldati</option>
+                    <option value="46">Villa Urquiza</option>
+                </select>
+            </form>
+        </div>
+    </div>
+
+    <div class="form calculos">
+        <h2 class="titulo">Seleccione que operaciones quiere ver.</h2>
+        <div class="superficie-calculos">
+            <div class="input-form">
+                <label>Mts2 Rectangulo</label>
+                <input type="text" id="metrosRectangulo" name="metrosRectangulo" required placeholder="Metros cuadrados" >
+            </div>
+            <div class="input-form">
+                <label>Valor total en us$</label>
+                <input type="Text" id="valorRectangulo" name="valorTotal" required placeholder="Valor Total" readonly>
+            </div>
+            <div class="input-form">
+                <label>Mts2 Circulo u Ovalo</label>
+                <input type="text" id="metrosCirculo" name="metrosCirculo" required placeholder="Metros cuadrados" readonly>
+            </div>
+            <div class="input-form">
+                <label>Valor total circulo en us$</label>
+                <input type="Text" id="valorCirculo" name="valorTotalCirculo" required placeholder="Valor Total" readonly>
+            </div>
+            <button class="calcular" type="button" id="mts2" onclick="click_button(this.id)">Calcular Mts2</button>
+            <button class="calcular" type="button"  id="valorTotal" onclick="click_button(this.id)">Calcular total en US$</button>
+            <button class="borrar" type="button" id="reset" onclick="borrar()">Reset</button>
+        </div>
+    </div>
+
+    <footer class="">
+        <p class="parrafo">PreEntrega 2 JavaScript</p>
+        <p class="parrafo">Comicion N 34165</p>
+        <p class="parrafo">Pardo Roberto</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+@import "variablesGlobales";
+@import "generales";
+@import "fuentes";
+@import "iframes";
+@import "gridAreas";
+
+body{
+    background-color: azure;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+input{
+    width: 175px;
+    height: 30px;
+    text-align: center;
+    font-size: large;
+}
+
+button{
+    width: 180px;
+    margin-top: 10px;
+    height: 30px;
+    font-size: large;
+
+}
+button:hover{
+    background-color: $color-base;
+    color: azure;
+} 
+/* .ordenAlfa{
+    background-color: $color-btn-alfabeticamente;
+} */
+.ordenPrecio{
+    background-color: $color-btn-precio;
+}
+.ordenComuna{
+    background-color: $color-btn-comuna;
+}
+.ordenZona{background-color: $color-btn-zona;}
+.calcular{
+    background-color: $color-btn-calculo;
+}
+.borrar{
+    background-color: $color-btn-reset;
+}
+label{
+    font-size: large;
+}
+
+select{
+    font-size: large;
+}
+
+h1{
+    color: $color-base;
+    font-size: 50px;
+}
+h2{
+    color: $color-base;
+    font-size: 30px;
+}
+
+header, footer{
+    @extend .box-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+header{
+    border-bottom: solid 30px $color-detalles;
+    border-radius: 0;
+}
+footer{
+    border-top: solid 30px $color-detalles;
+        border-radius: 0;
+    justify-content: space-between;
+}
+
+p{
+    font-size: 20px;
+}
+
+.mapa{
+    @extend .box-color;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.filtro{
+    @extend .box-color;
+    width: 90%;
+    height: auto;
+    //margin-right: auto;
+    margin-left: auto;
+    
+    .superficie{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-content: center;
+        margin-top: 40px;
+    }
+}
+
+.form{
+    @extend .box-color;
+    width: 90%;
+    height: auto;
+    margin-right: auto;
+    //margin-left: auto;    
+}
+
+.superficie-medidas{
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .input-form{
+        gap: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.superficie-calculos{
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+    .input-form{
+        gap: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}

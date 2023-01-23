@@ -1,0 +1,230 @@
+/* Reset */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700;900&family=Merriweather+Sans:wght@300;400;500;600;700;800&family=Overpass:wght@100;200;300;400;500;600;700;800&family=Pridi:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+/* Font size: 10px = 1em */
+html {
+  font-size: 62.5%;
+}
+
+/* extend */
+.box-color, .form, .filtro, .mapa, header, footer {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  background-color: rgba(22, 147, 181, 0.4);
+  border: solid rgb(177, 87, 87);
+  border-radius: 20px;
+}
+
+/* Fin extend */
+iframe .mapa-iframe {
+  min-width: none;
+  height: auto;
+  margin: auto;
+}
+
+header {
+  grid-area: head;
+}
+
+.mapa {
+  grid-area: mapa;
+}
+
+.filtro {
+  grid-area: filtro;
+}
+
+.medidas {
+  grid-area: medidas;
+}
+
+.calculos {
+  grid-area: calculos;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.container-grid {
+  height: auto;
+  margin: auto;
+  row-gap: 20px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 0.5fr 2fr 1fr 1fr 0.5fr;
+  flex-direction: column;
+  justify-content: center;
+  grid-template-areas: "head   head    head     head" "mapa   mapa    mapa     mapa" "filtro filtro  medidas  medidas" "filtro filtro  calculos calculos" "footer footer  footer   footer";
+}
+
+label {
+  grid-area: labe;
+}
+
+input {
+  grid-area: input;
+}
+
+select {
+  grid-area: select;
+}
+
+body {
+  background-color: azure;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+input {
+  width: 175px;
+  height: 30px;
+  text-align: center;
+  font-size: large;
+}
+
+button {
+  width: 180px;
+  margin-top: 10px;
+  height: 30px;
+  font-size: large;
+}
+
+button:hover {
+  background-color: #322046;
+  color: azure;
+}
+
+/* .ordenAlfa{
+    background-color: $color-btn-alfabeticamente;
+} */
+.ordenPrecio {
+  background-color: rgb(225, 193, 119);
+}
+
+.ordenComuna {
+  background-color: rgb(239, 245, 158);
+}
+
+.ordenZona {
+  background-color: rgb(149, 186, 220);
+}
+
+.calcular {
+  background-color: rgb(153, 255, 147);
+}
+
+.borrar {
+  background-color: rgb(171, 74, 74);
+}
+
+label {
+  font-size: large;
+}
+
+select {
+  font-size: large;
+}
+
+h1 {
+  color: #322046;
+  font-size: 50px;
+}
+
+h2 {
+  color: #322046;
+  font-size: 30px;
+}
+
+header, footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+header {
+  border-bottom: solid 30px rgb(177, 87, 87);
+  border-radius: 0;
+}
+
+footer {
+  border-top: solid 30px rgb(177, 87, 87);
+  border-radius: 0;
+  justify-content: space-between;
+}
+
+p {
+  font-size: 20px;
+}
+
+.mapa {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filtro {
+  width: 90%;
+  height: auto;
+  margin-left: auto;
+}
+.filtro .superficie {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: center;
+  margin-top: 40px;
+}
+
+.form {
+  width: 90%;
+  height: auto;
+  margin-right: auto;
+}
+
+.superficie-medidas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.superficie-medidas .input-form {
+  gap: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.superficie-calculos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.superficie-calculos .input-form {
+  gap: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}/*# sourceMappingURL=styles.css.map */
