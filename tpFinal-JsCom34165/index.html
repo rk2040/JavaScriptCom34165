@@ -63,25 +63,35 @@
     <div class="form medidas">
         <h2 class="titulo">Ingrese medidas y valores a calcular.</h2>
         <div class="superficie-medidas">
-            <div class="input-form">
+            <div class="lblMedidas">
                 <label>Metros de largo</label>
+            </div>
+            <div class="input-form">
                 <input type="number" id="largo" name="largo" required placeholder="Ingrese largo">
             </div>
-            <div class="input-form">
+            <div class="lblMedidas">
                 <label>Metros de ancho</label>
+            </div>
+            <div class="input-form">
                 <input type="number" id="ancho" name="ancho" required placeholder="Ingrese ancho">
             </div>
-            <div class="input-form">
+            <div class="lblMedidas">
                 <label>Metros de radio</label>
+            </div>
+            <div class="input-form">
                 <input type="number" id="radio" name="radio" required placeholder="Metros radio" readonly>
             </div>
-            <div class="input-form">
+            <div class="lblMedidas">
                 <label>Valor del Mt2 us$</label>
+            </div>
+            <div class="input-form">
                 <input type="number" id="valorMetro" name="valorMetro" required placeholder="Valor del mt2 en us$" readonly> 
             </div>
+            <div class="lblMedidas">
+                <label>Elija un barrio para <br>ver el precio por mt2</label>
+            </div>
             <form name="fomr1" class="input-form">
-                <label>Elija un barrio <br>y obtendra el <br>precio por mt2</label>
-                <select id="barrio" name="barrio" onclick="precioBarrio()">
+                <select  class="selMedidas" id="barrio" name="barrio" onclick="precioBarrio()">
                     <option value="1">Agronomia</option>
                     <option value="2">Almagro</option>
                     <option value="3">Balvanera</option>
@@ -135,26 +145,34 @@
 
     <div class="form calculos">
         <h2 class="titulo">Seleccione que operaciones quiere ver.</h2>
-        <div id="btnCalculos" class="superficie-calculos">
-            <div class="input-form">
+        <div class="superficie-calculos">
+            <div>
                 <label>Mts2 Circulo/Ovalo</label>
+            </div>
+            <div class="input-form">
                 <input type="text" id="metrosCirculo" name="metrosCirculo" required placeholder="Metros cuadrados" readonly>
             </div>
-            <div class="input-form">
+            <div>
                 <label>Valor total Circulo us$</label>
+            </div>
+            <div class="input-form">
                 <input type="Text" id="valorCirculo" name="valorTotalCirculo" required placeholder="Valor Total" readonly>
             </div>
-            <div class="input-form">
+            <div>
                 <label>Mts2 Rectangulo</label>
+            </div>
+            <div class="input-form">
                 <input type="text" id="metrosRectangulo" name="metrosRectangulo" required placeholder="Metros cuadrados" >
             </div>
-            <div class="input-form">
+            <div>
                 <label>Valor total en us$</label>
+            </div>
+            <div class="input-form">
                 <input type="Text" id="valorRectangulo" name="valorTotal" required placeholder="Valor Total" readonly>
             </div>
-            <!-- Botones Calculos desde JS -->
-            <div id="mensajeError"></div>
+            <div class="msjError" id="mensajeError"></div>
         </div>
+        <div id="btnCalculos"  class="boton"><!-- Botones Calculos desde JS --></div>
     </div>
 
     <footer class="footer">
